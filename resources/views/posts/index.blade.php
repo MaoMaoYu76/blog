@@ -11,7 +11,7 @@
             <h3><a href="{{route('posts.category',['category'=>$post->category_id])}}" class="badge bg-success">{{$post->category->title}}</a>{{$post->title}}</h3>
             <div>
                 @foreach($post->tags as $tag)
-                <a href="{{route('posts.tag',['tag'=>$tag->id])}}" class="badge rounded-pill bg-primary ">{{$tag->title}}</a>
+                <a href="{{route('posts.tag',['tag'=>$tag->id])}}" class="badge bg-info text-dark">{{$tag->title}}</a>
                 @endforeach
             </div>
         </div>
@@ -19,7 +19,7 @@
             <div class="content">
                 {!!Str::limit(strip_tags($post->content),200,'...')!!}
             </div>
-            <a href="{{route('posts.show',['post'=>$post->id])}}" class="btn btn-outline-info">繼續閱讀</a>
+            <a href="{{route('posts.show',['post'=>$post->id])}}" class="btn btn-primary">繼續閱讀</a>
         </div>
         <!-- <div class="col-3 py-2">
             @if($post->cover !='')
