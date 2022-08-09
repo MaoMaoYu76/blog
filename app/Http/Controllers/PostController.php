@@ -80,7 +80,7 @@ class PostController extends Controller
         //靜態方法Post::create只能使用在純文字、單一資料表。
         $post->save();
 
-        $tags=explode(',',$request->tag);
+        $tags=explode('#',$request->tag);
         foreach($tags as $tag){
             $tagModel = Tag::firstOrCreate(['title'=>$tag]);
             $post->tags()->attach($tagModel->id);
@@ -135,7 +135,7 @@ class PostController extends Controller
 
         $post->tags()->detach();
         // 先切斷關聯，再建立關聯才不會有重複的關聯。
-        $tags=explode(',',$request->tag);
+        $tags=explode('#',$request->tag);
         foreach($tags as $tag){
             $tagModel = Tag::firstOrCreate(['title'=>$tag]);
             $post->tags()->attach($tagModel->id);

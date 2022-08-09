@@ -12,7 +12,7 @@
             <input type="file" name="cover" id="cover">
         </div>
         <div class="form-group">
-            <label for="tag">標籤</label>
+            <label for="tag">標籤（請以#為字串開頭喔！）</label>
             <input type="text" name="tag" id="tag" class="form-control" value="{{old('tag')}}">
         </div>
         <div class="form-group">
