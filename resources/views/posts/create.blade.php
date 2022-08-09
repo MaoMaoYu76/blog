@@ -7,10 +7,10 @@
             <label for="title" class="form-label">Article Title</label>
             <input type="text" class="form-control" id="title" name="title" value="{{old('title')}}">
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="cover">封面圖片</label>
             <input type="file" name="cover" id="cover">
-        </div>
+        </div> -->
         <div class="form-group">
             <label for="tag">標籤（請以#為字串開頭喔！）</label>
             <input type="text" name="tag" id="tag" class="form-control" value="{{old('tag')}}">

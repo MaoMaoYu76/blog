@@ -4,11 +4,11 @@
     <div class="row ">
         <div class="col-8 justify-content-start">
             <h2>{{$post->title}}</h2>
-            <figure class="figure">
+            <!-- <figure class="figure">
             @if($post->cover !='')
                 <img src="{{asset('storage/images/'.$post->cover)}}" class="figure-img img-fluid rounded">
             @endif
-            </figure>
+            </figure> -->
             <div class="content">
                 {!!nl2br($post->content)!!}
             </div>

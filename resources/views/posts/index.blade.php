@@ -15,17 +15,17 @@
                 @endforeach
             </div>
         </div>
-        <div class="col-5 py-2">
+        <div class="col- py-2">
             <div class="content">
                 {!!Str::limit(strip_tags($post->content),200,'...')!!}
             </div>
             <a href="{{route('posts.show',['post'=>$post->id])}}" class="btn btn-outline-info">繼續閱讀</a>
         </div>
-        <div class="col-3 py-2">
+        <!-- <div class="col-3 py-2">
             @if($post->cover !='')
             <img src="{{asset('storage/images/'.$post->cover)}}" class="img-fluid">
             @endif
-        </div>
+        </div> -->
         <div>作者：{{$post->user->name}}</div>
 
         <div>
